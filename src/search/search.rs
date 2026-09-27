@@ -553,7 +553,7 @@ fn search<Node: NodeType>(
             if s_score < s_beta {
                 ext = 1;
 
-                if s_score < s_beta + 60 && !Node::PV {
+                if s_score <= s_beta - 60 && !Node::PV {
                     ext += 1
                 }
             }
