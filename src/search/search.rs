@@ -552,6 +552,10 @@ fn search<Node: NodeType>(
 
             if s_score < s_beta {
                 ext = 1;
+
+                if s_score < s_beta + 60 {
+                    ext += 1
+                }
             }
         }
 
